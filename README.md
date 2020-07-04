@@ -138,6 +138,29 @@ By using the command
     ```
 
 
+1. Jacoco pulgin to get the code coverage by running the test cases.
+
+
+# Spring Fundamentals
+
+1. Spring framework is intially developed as inversion of control container, which also known as dependency injection.
+
+1. It increase the testability, maintainability, Scalability.
+
+1. It decouple things, we can introduce caching layers.
+
+1. Add bellow dependency for spring dependency injection.
+
+    ```xml
+    <dependency>
+		    <groupId>org.springframework</groupId>
+		    <artifactId>spring-context</artifactId>
+		    <version>5.2.7.RELEASE</version>
+		</dependency>
+    ```
+
+1. 5 scopes of spring beans Singleton, Prototype, Request, Session, Global.
+
 # Java 8 Notes
 
 1.

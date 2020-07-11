@@ -161,6 +161,39 @@ By using the command
 
 1. 5 scopes of spring beans Singleton, Prototype, Request, Session, Global.
 
+#### 11/07/2020
+
+1. Few scopes are only valid in web-aware projects, they are Request, Session and Global.
+
+1. Streotype annotations @Component, @Service, @Repository, @Controller, @RestController.
+
+1. Streotype annotations are class level annotations, during component scan spring framework automatically detects the classes annotated with these stero types.
+
+1. What is the difference between @Component, @Service and @Repository.
+
+```
+Ans: The major difference between these stereotypes is they are used for different classification.
+
+We can use only @Component annotation across the application to mark the beans as Spring's managed components. Spring only pick up and registers beans with @Component  and doesn't look for @Service and @Repository in general.
+
+They are registered in ApplicationContext because they themselves are annotated with @Component.
+@Service and @Repository are special cases of @Component. They are technically the same but we use them for the different purposes.
+
+We mark beans with @Service to indicate that it's holding the business logic. So there's not any other specialty except using it in the service layer.
+
+@Repository’s job is to catch persistence specific exceptions and rethrow them as one of Spring’s unified unchecked exception. It will convert all the persistance exceptions to DataAccessException.
+```
+
+1. What is the difference between @Controller vs @RestController ?
+
+```
+Ans: @Controller is used for traditional Spring controllers.
+
+The @RestController annotation was introduced in Spring 4.0 to simplify the creation of RESTful web services. It's a convenience annotation that combines @Controller and @ResponseBody – which eliminates the need to annotate every request handling method of the controller class with the @ResponseBody annotation.
+
+The controller annotated with the @RestController annotation, don't need to include @ResponseBody in each method of the controller.
+```
+
 # Java 8 Notes
 
 1.

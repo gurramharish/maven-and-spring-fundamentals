@@ -1,6 +1,7 @@
 package com.hans.msf;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
 
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.DisplayName;
@@ -12,6 +13,7 @@ public class CalculatorTest {
 	
 	@BeforeAll
 	public static void setup() {
+		System.out.println(System.getProperty("environment"));
 		calculator = new Calculator();
 	}
 
@@ -24,7 +26,7 @@ public class CalculatorTest {
 	@Test
 	@DisplayName("Sum of two Long numbers success case")
 	public void sumLongSuccess() {
-		assertEquals(9L, calculator.sum(4L, 5L));
+		assertNotNull(calculator.sum(282899282928L, 2828992829289998828L));
 	}
 	
 	@Test

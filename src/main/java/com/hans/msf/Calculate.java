@@ -6,7 +6,7 @@ public class Calculate {
 	private Subtractor subtractor;
 	
 	public void addAndPrint(int a, int b) {
-		adder = new Adder();
+		adder = MSFFactory.getInstance().getAdder();
 		int sum = adder.add(a, b);
 		System.out.println("Sum : " + sum);
 	}
